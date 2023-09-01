@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import './components/button/button';
+import Success from './components/success/success';
+import Form from './components/form/form';
+import { NewsletterContext } from './context/context';
+import {useState} from 'react';
+import {Route, Routes} from 'react-router-dom';
+
 
 function App() {
+
+  const [email,setEmail] = useState("");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <NewsletterContext.Provider value={{email,setEmail}}>
+     <Routes>
+        <Route path='/' element={<Form/>}exact/>
+        <Route path='/success' element={<Success/>}exact/>
+     </Routes>
+     </NewsletterContext.Provider>
     </div>
   );
 }

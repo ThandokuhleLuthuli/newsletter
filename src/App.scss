@@ -1,0 +1,24 @@
+// common styles
+@import "../src/assets/styles/reset";
+
+// components
+@import "./components/button/button";
+@import "./components/form/form";
+@import "./components/image/image";
+@import "./components/input/input";
+@import "./components/success/success";
+
+//layout
+
+
+
+html, body,
+#root, .App {
+    height: 100%;
+}
+.App {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: $Dark-Slate-Grey;
+}

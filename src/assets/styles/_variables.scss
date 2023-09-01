@@ -1,0 +1,48 @@
+//colours
+//primary-colours
+$Tomato: hsl(4, 100%, 67%);
+
+//secondary colours
+$Dark-Slate-Grey: hsl(234, 29%, 20%);
+$Charcoal-Grey: hsl(235, 18%, 26%);
+$Grey: hsl(231, 7%, 60%);
+$White: hsl(0, 0%, 100%);
+
+//error
+$light-red: #ffe8e6;
+
+//font-weight:
+$normal: 400;
+$bold: 700;
+
+//font family 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+$roboto : 'Roboto', sans-serif;
+
+//font-size
+$regular: 0.063rem * 16;
+$large: 0.063rem * 32;
+$small: 0.063rem * 14; 
+//
+
+//breakpoints
+@mixin media ($breakpoint) { 
+
+    @if $breakpoint == desktop {    
+        @media only screen and (max-width: 1024px) {
+          @content;
+        }
+      }
+  
+    @if $breakpoint == tablet {    
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+ 
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 530px) {
+      @content;
+    }
+  }
+}

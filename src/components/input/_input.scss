@@ -1,0 +1,21 @@
+@import "../../assets/styles/variables";
+
+.input {
+    border: 1px solid $Grey;
+    border-radius: 5px;
+    color: $Grey;
+    font-family: $roboto;
+    outline: none;
+    width: 100%;
+    padding: 20px 10px;
+
+    &:focus {
+        border: 1px solid $Charcoal-Grey;
+    }
+   &[aria-invalid="true"] {
+        border: 1px solid $Tomato;
+        background-color: $light-red;
+        color: $Tomato;
+        transition: all 0.10s ease-in-out;
+    }
+}

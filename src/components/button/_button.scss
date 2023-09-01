@@ -1,0 +1,26 @@
+@import "../../assets/styles/variables";
+
+
+.button {
+    border: none;
+    border-radius: 5px;
+    color: $White;
+    font-weight: $bold;
+    background-color:  $Dark-Slate-Grey;
+    cursor: pointer;
+    font-family: $roboto;
+
+    //size
+    &--xl {
+        padding: 20px 40px;
+    }
+
+    //modifier
+
+    //hover
+    &:hover {
+        background-color: $Tomato;
+        box-shadow: 0px 10px 15px -3px $Tomato;
+        transition: all 0.10s ease-out;
+    }
+}
