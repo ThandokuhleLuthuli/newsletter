@@ -1,4 +1,4 @@
-import React , {useState} from 'react';
+import React from 'react';
 import Input from '../input/input';
 import Button from '../button/button';
 import desktopimage from '../../assets/images/illustration-sign-up-desktop.svg';
